@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="sneakers' logo" class="logo" />
+      <nav class="nav">
+        <img
+          src="./images/icon-menu.svg"
+          alt=""
+          class="menu-icon burger mobile-only"
+        />
+        <div class="nav-shadow"></div>
+        <div class="nav-items-cont off">
+          <img
+            src="./images/icon-close.svg"
+            alt=""
+            class="menu-icon close mobile-only"
+          />
+          <a href="#collections">Collections</a>
+          <a href="#men">Men</a>
+          <a href="#women">Women</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <div class="cart-icon-cont" tabindex="0">
+        <img src="./images/icon-cart.svg" alt="a cart icon" class="cart-icon" />
+        <div class="cart-items">
+          <h4 class="cart-title">Cart</h4>
+          <div class="cart-state empty">
+            <div class="empty-cart">Your cart is empty</div>
+            <div class="cart-item">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="thumbnail"
+                class="cart-item-thumb-img"
+              />
+              <div class="cart-item-info">
+                <p class="cart-item-title">Fall Limited Edition Sneakers</p>
+                <div class="cart-item-price-info">
+                  <span class="cart-item-price">$125.00</span>
+                  <span>x</span>
+                  <span class="cart-item-amount">3</span>
+                  <span class="cart-item-total">$375</span>
+                </div>
+              </div>
+              <button class="cart-item-remove">
+                <img src="./images/icon-delete.svg" alt="delete" />
+              </button>
+            </div>
+            <button class="cart-item-checkout">Checkout</button>
+          </div>
+        </div>
+        <span class="cart-items-number zero"></span>
+      </div>
+      <img src="./images/image-avatar.png" alt="avatar" class="user-img" />
+    </header>
+    <main>
+      <div class="light-box off">
+        <div class="slider light-box--slider">
+          <span class="light-box-close-btn">
+            <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                fill="#69707D"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <div class="slider-light-box--next">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m2 1 8 8-8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="slider-light-box--prev">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 1 3 9l8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="slider-img-cont--light-box">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="fall limited editition sneakers"
+              class="slider-img--light-box"
+            />
+            <img
+              src="images/image-product-2.jpg"
+              alt="fall limited editition sneakers"
+              class="slider-img--light-box slider-hidden-img"
+            />
+            <img
+              src="images/image-product-3.jpg"
+              alt="fall limited editition sneakers"
+              class="slider-img--light-box slider-hidden-img"
+            />
+            <img
+              src="images/image-product-4.jpg"
+              alt="fall limited editition sneakers"
+              class="slider-img--light-box slider-hidden-img"
+            />
+          </div>
+          <div
+            class="slider-thumbs slider-thumbs--light-box desktop-only"
+            tabindex="0"
+          >
+            <div class="thumb-cont--light-box selected">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="fall limited editition sneakers thumbnail"
+                class="thumb-img"
+              />
+            </div>
+            <div class="thumb-cont--light-box">
+              <img
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="fall limited editition sneakers thumbnail"
+                class="thumb-img"
+              />
+            </div>
+            <div class="thumb-cont--light-box">
+              <img
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="fall limited editition sneakers thumbnail"
+                class="thumb-img"
+              />
+            </div>
+            <div class="thumb-cont--light-box">
+              <img
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="fall limited editition sneakers thumbnail"
+                class="thumb-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider-next mobile-only"></div>
+        <div class="slider-prev mobile-only"></div>
+        <img
+          src="./images/image-product-1.jpg"
+          alt="fall limited editition sneakers"
+          class="slider-img"
+        />
+        <img
+          src="images/image-product-2.jpg"
+          alt="fall limited editition sneakers"
+          class="slider-img slider-hidden-img"
+        />
+        <img
+          src="images/image-product-3.jpg"
+          alt="fall limited editition sneakers"
+          class="slider-img slider-hidden-img"
+        />
+        <img
+          src="images/image-product-4.jpg"
+          alt="fall limited editition sneakers"
+          class="slider-img slider-hidden-img"
+        />
+        <div class="slider-thumbs desktop-only" tabindex="0">
+          <div class="thumb-cont selected">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="fall limited editition sneakers thumbnail"
+              class="thumb-img"
+            />
+          </div>
+          <div class="thumb-cont">
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="fall limited editition sneakers thumbnail"
+              class="thumb-img"
+            />
+          </div>
+          <div class="thumb-cont">
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="fall limited editition sneakers thumbnail"
+              class="thumb-img"
+            />
+          </div>
+          <div class="thumb-cont">
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="fall limited editition sneakers thumbnail"
+              class="thumb-img"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="porduct-desc-cont">
+        <p class="company-name">sneaker company</p>
+        <h1 class="title">Fall Limited Edition Sneakers</h1>
+        <p class="desc">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="info-cont">
+          <div>
+            <p class="price">$125.00</p>
+            <p class="sale-percent">50%</p>
+          </div>
+          <p class="no-sale-price">$250.00</p>
+        </div>
+        <div class="cta-cont">
+          <div class="amount-input">
+            <button class="decrease-btn">
+              <img src="./images/icon-minus.svg" alt="a minus sign" />
+            </button>
+            <span class="amount-number">1</span>
+            <button class="increase-btn">
+              <img src="./images/icon-plus.svg" alt="a plus sign" />
+            </button>
+          </div>
+          <button class="cart-cta">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                class="btn-cart-icon"
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="#69707D"
+                fill-rule="nonzero"
+              />
+            </svg>
+            <span>Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
