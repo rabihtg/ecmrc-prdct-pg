@@ -29,6 +29,7 @@ const lightBox = document.querySelector(".light-box");
 const lightBoxCloseBtn = document.querySelector(".light-box-close-btn");
 const lightBoxNext = document.querySelector(".slider-light-box--next");
 const lightBoxPrev = document.querySelector(".slider-light-box--prev");
+const body = document.querySelector("body");
 
 let currentImageIndex = 0;
 const numberOfImages = sliderImages.length;
@@ -112,11 +113,13 @@ lightBoxPrev.addEventListener("click", () => {
 menuOpen.addEventListener("click", () => {
   navCont.classList.remove("off");
   nav.classList.add("on");
+  body.classList.add("no-scroll");
 });
 
 menuClose.addEventListener("click", () => {
   navCont.classList.add("off");
   nav.classList.remove("on");
+  body.classList.remove("no-scroll");
 });
 
 addToCartBtn.addEventListener("click", () => {
@@ -128,6 +131,7 @@ addToCartBtn.addEventListener("click", () => {
     parseInt(amountText.textContent) *
       parseInt(cartItemPrice.textContent.split("$")[1]);
   cartState.classList.remove("empty");
+  amountText.textContent = 1;
 });
 cartItemRemove.addEventListener("click", () => {
   cartState.classList.add("empty");

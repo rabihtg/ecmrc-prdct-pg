@@ -61,10 +61,6 @@ header {
   z-index: -1;
   inset: 0;
 }
-.nav-shadow.on {
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.75);
-}
 .logo {
   order: 1;
 }
@@ -526,7 +522,6 @@ main {
   }
   .slider-light-box--next,
   .slider-light-box--prev {
-    content: "";
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -585,5 +580,12 @@ main {
 @media (max-width: 767px) {
   .desktop-only {
     display: none;
+  }
+  body.no-scroll {
+    overflow: hidden;
+  }
+  .nav-shadow.on {
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.75);
   }
 }
