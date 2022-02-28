@@ -42,7 +42,14 @@
         </div>
       </nav>
       <div class="cart-icon-cont" tabindex="0">
-        <img src="./images/icon-cart.svg" alt="a cart icon" class="cart-icon" />
+        <div class="cart-icon-number-cont">
+          <img
+            src="./images/icon-cart.svg"
+            alt="a cart icon"
+            class="cart-icon"
+          />
+          <span class="cart-items-number zero"></span>
+        </div>
         <div class="cart-items">
           <h4 class="cart-title">Cart</h4>
           <div class="cart-state empty">
@@ -69,13 +76,12 @@
             <button class="cart-item-checkout">Checkout</button>
           </div>
         </div>
-        <span class="cart-items-number zero"></span>
       </div>
       <img src="./images/image-avatar.png" alt="avatar" class="user-img" />
     </header>
     <main>
       <div class="light-box off">
-        <div class="slider light-box--slider">
+        <div class="slider-lightbox-cont">
           <span class="light-box-close-btn">
             <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -85,49 +91,51 @@
               />
             </svg>
           </span>
-          <div class="slider-light-box--next">
-            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="m2 1 8 8-8 8"
-                stroke="#1D2026"
-                stroke-width="3"
-                fill="none"
-                fill-rule="evenodd"
+          <div class="slider light-box--slider">
+            <div class="slider-light-box--next">
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m2 1 8 8-8 8"
+                  stroke="#1D2026"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="slider-light-box--prev">
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 1 3 9l8 8"
+                  stroke="#1D2026"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <figure>
+              <img
+                src="./images/image-product-1.jpg"
+                alt="fall limited editition sneakers"
+                class="slider-img--light-box"
               />
-            </svg>
-          </div>
-          <div class="slider-light-box--prev">
-            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M11 1 3 9l8 8"
-                stroke="#1D2026"
-                stroke-width="3"
-                fill="none"
-                fill-rule="evenodd"
+              <img
+                src="images/image-product-2.jpg"
+                alt="fall limited editition sneakers"
+                class="slider-img--light-box slider-hidden-img"
               />
-            </svg>
-          </div>
-          <div class="slider-img-cont--light-box">
-            <img
-              src="./images/image-product-1.jpg"
-              alt="fall limited editition sneakers"
-              class="slider-img--light-box"
-            />
-            <img
-              src="images/image-product-2.jpg"
-              alt="fall limited editition sneakers"
-              class="slider-img--light-box slider-hidden-img"
-            />
-            <img
-              src="images/image-product-3.jpg"
-              alt="fall limited editition sneakers"
-              class="slider-img--light-box slider-hidden-img"
-            />
-            <img
-              src="images/image-product-4.jpg"
-              alt="fall limited editition sneakers"
-              class="slider-img--light-box slider-hidden-img"
-            />
+              <img
+                src="images/image-product-3.jpg"
+                alt="fall limited editition sneakers"
+                class="slider-img--light-box slider-hidden-img"
+              />
+              <img
+                src="images/image-product-4.jpg"
+                alt="fall limited editition sneakers"
+                class="slider-img--light-box slider-hidden-img"
+              />
+            </figure>
           </div>
           <div
             class="slider-thumbs slider-thumbs--light-box desktop-only"
@@ -164,29 +172,33 @@
           </div>
         </div>
       </div>
-      <div class="slider">
-        <div class="slider-next mobile-only"></div>
-        <div class="slider-prev mobile-only"></div>
-        <img
-          src="./images/image-product-1.jpg"
-          alt="fall limited editition sneakers"
-          class="slider-img"
-        />
-        <img
-          src="images/image-product-2.jpg"
-          alt="fall limited editition sneakers"
-          class="slider-img slider-hidden-img"
-        />
-        <img
-          src="images/image-product-3.jpg"
-          alt="fall limited editition sneakers"
-          class="slider-img slider-hidden-img"
-        />
-        <img
-          src="images/image-product-4.jpg"
-          alt="fall limited editition sneakers"
-          class="slider-img slider-hidden-img"
-        />
+      <div class="slider-cont">
+        <div class="slider">
+          <div class="slider-next mobile-only"></div>
+          <div class="slider-prev mobile-only"></div>
+          <figure>
+            <img
+              src="./images/image-product-1.jpg"
+              alt="fall limited editition sneakers"
+              class="slider-img"
+            />
+            <img
+              src="images/image-product-2.jpg"
+              alt="fall limited editition sneakers"
+              class="slider-img slider-hidden-img"
+            />
+            <img
+              src="images/image-product-3.jpg"
+              alt="fall limited editition sneakers"
+              class="slider-img slider-hidden-img"
+            />
+            <img
+              src="images/image-product-4.jpg"
+              alt="fall limited editition sneakers"
+              class="slider-img slider-hidden-img"
+            />
+          </figure>
+        </div>
         <div class="slider-thumbs desktop-only" tabindex="0">
           <div class="thumb-cont selected">
             <img

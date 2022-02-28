@@ -234,7 +234,7 @@ header {
   display: none;
 }
 @media (hover: none) {
-  .cart-icon.selected + .cart-items {
+  .cart-icon-number-cont.selected + .cart-items {
     display: block;
   }
 }
@@ -272,8 +272,15 @@ main {
   display: none;
 }
 .slider {
+  width: 100%;
   position: relative;
+  overflow: hidden;
   margin-inline: auto;
+}
+.slider figure {
+  transition: transform 300ms ease-in;
+  margin: 0;
+  display: flex;
 }
 .slider-img {
   aspect-ratio: 1 / 0.8;
@@ -282,11 +289,7 @@ main {
 }
 .slider-prev,
 .slider-next {
-  content: "";
   top: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 700;
   position: absolute;
   line-height: 0;
@@ -304,13 +307,6 @@ main {
 .slider-next {
   right: 20px;
   background: url(./images/icon-next.svg) no-repeat center center;
-}
-.slider-hidden-img {
-  transition: opacity 250ms ease-in;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
 }
 .porduct-desc-cont {
   padding: 0 1rem;
@@ -428,14 +424,25 @@ main {
     margin-inline: auto;
     gap: clamp(1rem, 4vw, 5rem);
   }
-  .slider {
-    display: flex;
+  .slider-cont {
+    border-radius: 12px;
+    position: relative;
     flex-direction: column;
+    display: flex;
+    flex-basis: 100%;
     gap: 1.5rem;
+  }
+  .slider {
+    border-radius: 12px;
+  }
+  .slider figure {
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
   .slider-img {
     cursor: pointer;
-    border-radius: 12px;
     aspect-ratio: unset;
   }
   .slider-thumbs {
@@ -494,7 +501,6 @@ main {
     inset: 0;
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     overflow: auto;
     align-items: center;
@@ -514,11 +520,16 @@ main {
   }
   .light-box--slider {
     max-width: 600px;
-    position: relative;
+    position: static;
     width: 70vh;
+    overflow: hidden;
+    border-radius: 12px;
   }
-  .slider-img-cont--light-box {
+  .slider-lightbox-cont {
+    display: flex;
     position: relative;
+    flex-direction: column;
+    gap: 1.5rem;
   }
   .slider-light-box--next,
   .slider-light-box--prev {
@@ -546,9 +557,6 @@ main {
     left: 0;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
-  .slider-img--light-box {
-    border-radius: 8px;
   }
   .slider-thumbs--light-box {
     width: 75%;

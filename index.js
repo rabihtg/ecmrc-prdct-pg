@@ -14,7 +14,8 @@ const thumbsArr = Array.from(thumbs);
 
 const addToCartBtn = document.querySelector(".cart-cta");
 const cartItemRemove = document.querySelector(".cart-item-remove");
-const cartIcon = document.querySelector(".cart-icon");
+
+const cartIconCont = document.querySelector(".cart-icon-number-cont");
 
 const cartState = document.querySelector(".cart-state");
 const cartItemAmount = document.querySelector(".cart-item-amount");
@@ -30,12 +31,13 @@ const lightBoxCloseBtn = document.querySelector(".light-box-close-btn");
 const lightBoxNext = document.querySelector(".slider-light-box--next");
 const lightBoxPrev = document.querySelector(".slider-light-box--prev");
 const body = document.querySelector("body");
+const sliderFigure = document.querySelectorAll(".slider figure");
 
 let currentImageIndex = 0;
 const numberOfImages = sliderImages.length;
 
-cartIcon.addEventListener("click", () => {
-  cartIcon.classList.toggle("selected");
+cartIconCont.addEventListener("click", () => {
+  cartIconCont.classList.toggle("selected");
 });
 
 sliderImages.forEach((img) => {
@@ -46,7 +48,6 @@ sliderImages.forEach((img) => {
 
 thumbs.forEach((th) => {
   th.addEventListener("click", () => {
-    hideCurrentImg();
     currentImageIndex = thumbsArr.indexOf(th);
     setSelectedThumb();
     setCurrentImg();
@@ -55,7 +56,6 @@ thumbs.forEach((th) => {
 
 boxThumbs.forEach((bt) => {
   bt.addEventListener("click", () => {
-    hideCurrentImg();
     currentImageIndex = boxThumbsArr.indexOf(bt);
     setSelectedThumb();
     setCurrentImg();
@@ -73,26 +73,18 @@ decreaseBtn.addEventListener("click", () => {
 });
 
 sliderNext.addEventListener("click", () => {
-  hideCurrentImg();
-
   currentImageIndex += 1;
   currentImageIndex %= numberOfImages;
-
   setCurrentImg();
 });
 
 sliderPrev.addEventListener("click", () => {
-  hideCurrentImg();
-
   currentImageIndex -= 1;
   currentImageIndex = (currentImageIndex + numberOfImages) % numberOfImages;
-
   setCurrentImg();
 });
 
 lightBoxNext.addEventListener("click", () => {
-  hideCurrentImg();
-
   currentImageIndex += 1;
   currentImageIndex %= numberOfImages;
 
@@ -101,8 +93,6 @@ lightBoxNext.addEventListener("click", () => {
 });
 
 lightBoxPrev.addEventListener("click", () => {
-  hideCurrentImg();
-
   currentImageIndex -= 1;
   currentImageIndex = (currentImageIndex + numberOfImages) % numberOfImages;
 
@@ -142,18 +132,10 @@ lightBoxCloseBtn.addEventListener("click", () => {
   lightBox.classList.add("off");
 });
 
-function hideCurrentImg() {
-  const currentImage = sliderImages[currentImageIndex];
-  currentImage.classList.add("slider-hidden-img");
-  const currentImageBox = boxSliderImages[currentImageIndex];
-  currentImageBox.classList.add("slider-hidden-img");
-}
-
 function setCurrentImg() {
-  const selectedImage = sliderImages[currentImageIndex];
-  selectedImage.classList.remove("slider-hidden-img");
-  const selectedImageBox = boxSliderImages[currentImageIndex];
-  selectedImageBox.classList.remove("slider-hidden-img");
+  sliderFigure.forEach((figure) => {
+    figure.style.transform = "translateX(" + -100 * currentImageIndex + "%)";
+  });
 }
 
 function setSelectedThumb() {
